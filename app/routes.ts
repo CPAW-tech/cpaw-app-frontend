@@ -1,3 +1,14 @@
-import { type RouteConfig, index } from "@react-router/dev/routes";
+import {
+    type RouteConfig,
+    index,
+    layout,
+    route,
+} from '@react-router/dev/routes'
 
-export default [index("routes/home.tsx")] satisfies RouteConfig;
+export default [
+    //TODO: default index page that redirects to login or dashboard
+
+    layout('layouts/SecureBoundary.tsx', [index('/dashboard')]),
+    route('/signin', 'routes/authentication/signup.tsx'),
+    route('/login', 'routes/authentication/login.tsx'),
+] satisfies RouteConfig
