@@ -8,7 +8,9 @@ import {
 export default [
     //TODO: default index page that redirects to login or dashboard
 
-    layout('layouts/SecureBoundary.tsx', [index('/dashboard')]),
-    route('/signin', 'routes/authentication/signup.tsx'),
+    layout('layouts/SecureBoundary.tsx', [
+        index('routes/dashboard/dashboard.jsx'),
+    ]),
+    route('/signup', 'routes/authentication/signup.tsx'),
     route('/login', 'routes/authentication/login.tsx'),
 ] satisfies RouteConfig
