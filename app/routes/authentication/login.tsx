@@ -59,7 +59,7 @@ export default function Login() {
         })
 
         if (logedinUser.err) {
-            return 
+            return
         }
 
         let jsonUser = await logedinUser.json()
