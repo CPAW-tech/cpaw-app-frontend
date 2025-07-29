@@ -93,7 +93,7 @@ export default function SignUp() {
 
         setUser(jsonUser)
 
-        navigate('/dashboard')
+        navigate('/')
     }
 
     //TODO: find a way to reuse styles. consider refactor into loop

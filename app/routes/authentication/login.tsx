@@ -64,7 +64,7 @@ export default function Login() {
 
         setUser(jsonUser)
 
-        navigate('/dashboard')
+        navigate('/')
     }
 
     //TODO: find a way to reuse styles. consider refactor into loop
