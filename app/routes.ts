@@ -9,7 +9,7 @@ export default [
     //TODO: default index page that redirects to login or dashboard
 
     layout('layouts/SecureBoundary.tsx', [
-        index('routes/dashboard/dashboard.jsx'),
+        index('routes/dashboard/dashboard.tsx'),
     ]),
     route('/signup', 'routes/authentication/signup.tsx'),
     route('/login', 'routes/authentication/login.tsx'),

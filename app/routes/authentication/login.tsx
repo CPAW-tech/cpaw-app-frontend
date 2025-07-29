@@ -58,13 +58,17 @@ export default function Login() {
             console.error(e)
         })
 
+        if (logedinUser.err) {
+            return 
+        }
+
         let jsonUser = await logedinUser.json()
 
         console.log(jsonUser)
 
         setUser(jsonUser)
 
-        navigate('/dashboard')
+        navigate('/')
     }
 
     //TODO: find a way to reuse styles. consider refactor into loop
