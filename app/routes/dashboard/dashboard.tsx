@@ -1,11 +1,18 @@
-// import { userAuthAtom } from '../../atoms/userContextAtoms'
-// import { useAtom } from 'jotai'
+import { useEffect } from 'react'
 
 export default function Dashboard() {
-    // const userAuth = useAtom(userAuthAtom)
-
-    console.log('Hello')
-
+    useEffect(() => {
+        const testProtected = async () => {
+            await fetch('http://localhost:3000/api/dashboard', {
+                method: 'GET',
+                headers: { 'Content-Type': 'application/json' },
+                credentials: 'include', //allows cookies to be set
+            }).catch((e) => {
+                console.error(e)
+            })
+        }
+        testProtected()
+    }, [])
     return (
         <>
             <h1>Dashboard!</h1>

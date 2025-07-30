@@ -58,15 +58,11 @@ export default function Login() {
             console.error(e)
         })
 
-        if (logedinUser.err) {
-            return
-        }
-
         let jsonUser = await logedinUser.json()
 
-        console.log(jsonUser)
-
-        setUser(jsonUser)
+        if (!logedinUser.ok) {
+            return
+        }
 
         navigate('/')
     }

@@ -6,9 +6,10 @@ import {
 } from '@react-router/dev/routes'
 
 export default [
-    layout('layouts/SecureBoundary.tsx', [
-        index('routes/dashboard/dashboard.tsx'),
-    ]),
+    // layout('layouts/SecureBoundary.tsx', [
+    //     index('routes/dashboard/dashboard.tsx'),
+    // ]),
+    index('routes/dashboard/dashboard.tsx'),
     route('/signup', 'routes/authentication/signup.tsx'),
     route('/login', 'routes/authentication/login.tsx'),
 ] satisfies RouteConfig
